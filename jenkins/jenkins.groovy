@@ -11,7 +11,7 @@ job('jenkins1') {
     steps {
         dockerBuildAndPublish {
             repositoryName('preetesh/docker-demo')
-            tag('${BUILD_TIMESTAMP}-${GIT_REVISION,length=7}')
+            tag('${BUILD_TIMESTAMP}-${GIT_REVISION,length9}')
             registryCredentials('docker-hub')
             forcePull(false)
             createFingerprints(false)
